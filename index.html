@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="./assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.122.0">
+  <title>ScrollTime | Descubre cuanto tiempo de vida estás perdiendo</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+    </symbol>
+  </svg>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <use href="#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+          aria-pressed="true">
+          <svg class="bi me-2 opacity-50" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+      <path
+        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+    </symbol>
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+      <title>ScrollTime</title>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+      </path>
+    </symbol>
+  </svg>
+
+  <div class="col-lg-8 mx-auto p-4 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+        <!--<svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg> -->
+        <span class="fs-4 ubuntu-medium">ScrollTime</span>
+      </a>
+    </header>
+
+    <main>
+      <h1 class="text-body-emphasis">Pasas demasiado tiempo usando pantallas?</h1>
+      <p class="fs-5 col-md-8">Los expertos dicen que los adultos deben limitar el tiempo frente a las pantallas (fuera
+        del trabajo) a <b>menos de dos horas al día</b>. Según un informe digital de 2023, el tiempo promedio frente a
+        las pantallas de las personas de entre 16 y 64 años a nivel mundial es de 6 horas y 37 minutos al día.</p>
+      <p class="fs-5 col-md-8 mb-5">Cualquier tiempo adicional que normalmente se pasaría frente a una pantalla debe
+        dedicarse en su lugar a realizar actividad física.</p>
+
+      <div>
+        <div class="row g-5">
+          <div class="col-md-6">
+            <h3>Calcula el tiempo que estás malgastando</h3>
+
+            <div class="input-group">
+              <p class="text-html">Entra en ajustes y comprueba el tiempo de media diario que dedicas a tu smartphone o
+                a una app (por ej: Instagram)
+              </p>
+              <input id="inputHoras" type="text" class="form-control" placeholder="Horas" aria-label="Horas">
+              <span class="input-group-text">h</span>
+              <input  id="inputMinutos"  type="text" class="form-control" placeholder="Minutos" aria-label="Minutos">
+              <span class="input-group-text">m</span>
+            </div>
+            <br>
+            <div class="mb-5">
+              <a onclick="mostrarTiempoPerdidoDiv()"
+                class="btn btn-primary btn-lg px-4">Calcular</a>
+            </div>
+          </div>
+
+          <div data-aos="fade-right" class="col-md-6">
+            <div id="divTiempoPerdido" class="mb-3">
+              <div class="card" id="cardTiempoPerdido" style="width: 100%;">
+                <img id="imageReactionEmoji" style="width: 12rem;" class="card-img-top rounded mx-auto d-block mt-4" alt="...">
+                <div class="card-body">
+                  <h5 id="labelNivelUso" class="card-title text-center">Card title</h5>
+                  <h6 id="labelMinutosDiarios" class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6>
+                  <ul class="list-unstyled ps-0">
+                    <li>
+                      <ul>
+                        <li><p id="porcentajeDiarioMalgastado"></p></li>
+                        <li><p id="diasPerdidosAlAño"></p></li>
+                        <li><p id="añosPerdidosEn10años"></p></li>
+                        <li><p id="añosPerdidosEn40años"></p></li>
+                        
+                      </ul>
+                    </li>
+                  </ul>
+                  <h6 class="text-center">Cuando llegues al final de tu vida, te habrá merecido la pena pasar tanto tiempo viendo TikToks/Reels/Shorts?</h6>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class=" mb-5">
+
+      <div class="row g-5">
+
+        <div class="col-md-6">
+          <h3 class="text-body-emphasis">Como reducir nuestro tiempo de pantalla</h3>
+          <p>Los expertos recomiendan evitar el uso de pantallas durante la primera hora del día para mejorar la función
+            cognitiva y la claridad mental. En su lugar, considera comenzar tu mañana con una de estas actividades: </p>
+          <ul class="list-unstyled ps-0">
+            <li>
+              <ul>
+                <li>Haz ejercicio para energizar tu cuerpo</li>
+                <li>Conéctate con un amigo o familiar para apoyo emocional</li>
+                <li>Prepara un desayuno nutritivo</li>
+                <li>Practica meditación y reflexiona sobre tus bendiciones</li>
+                <li>Escucha música motivadora</li>
+                <li>Escribe una lista de gratitud</li>
+                <li>Lee un libro inspirador</li>
+                <li>Pasa tiempo al aire libre para disfrutar de la luz de la mañana</li>
+              </ul>
+            </li>
+            <p>Al priorizar estos hábitos, estableces un tono positivo para el resto del día.</p>
+          </ul>
+
+          <h5 class="mt-4">Aquí hay algunas formas en que los adultos pueden reducir su tiempo promedio frente a la
+            pantalla:</h5>
+          <ul class="list-unstyled ps-0">
+            <li>
+              <ul>
+                <li>Deja de hacer phubbing, es decir, enfocarte en tu dispositivo cuando tienes la oportunidad de hablar
+                  cara a cara con alguien.</li>
+                <li>Apaga las notificaciones innecesarias, ya que pueden llevarte de vuelta al teléfono.</li>
+                <li>Establece límites de tiempo para todos los dispositivos, incluyendo televisores y lectores
+                  electrónicos.</li>
+                <li>Establece un “toque de queda” para los dispositivos, como no usarlos dos horas antes de dormir, no
+                  usarlos durante una hora después de despertar, o al menos 30 minutos.</li>
+                <li>No comas mientras usas un dispositivo; podrías tender a comer en exceso (y perder la oportunidad de
+                  conectar con quienes te rodean).</li>
+                <li>Evita las pantallas en el dormitorio.</li>
+                <li>Tómate descansos del trabajo en el ordenador cada 30 minutos.</li>
+                <li>Limita tu tiempo en las redes sociales.</li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="col-md-6">
+          <h3 class="text-body-emphasis">Por qué los smartphones son adictivos?</h3>
+          <p>Casi todas las aplicaciones en tu smartphoen han sido diseñadas cuidadosamente para manipular la química
+            cerebral y provocar comportamientos adictivos. Estas aplicaciones pueden incluir características como: </p>
+          <ul class="list-unstyled ps-0">
+            <li>
+              <ul>
+                <li><b>Scroll Infinito</b>: Acceso continuo a lo que estás viendo.</li>
+                <li><b>El algoritmo aprende de ti: </b>En tu feed va apareciendo lo que más te interesa.</li>
+                <li><b>Efecto Zeigarnik:</b> Las personas recuerdan mejor las tareas interrumpidas o no terminadas que
+                  las tareas completadas. Hacer scroll en TikTok/Reels/Shorts es una tarea que nunca llegarás a
+                  'completar', siempre hay más reels por ver.</li>
+                <li><b>Comparación social o recompensa:</b> Participar y esperar comentarios sociales positivos.</li>
+                <li><b>Efecto de mera exposición:</b> Usar una aplicación hasta el punto de que sea difícil dejarla.
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <h5 class="">El uso del smartphone es gratificante</h5>
+          <p>Los psicólogos tienen un término para describir esa sensación irresistible de imprevisibilidad y
+            anticipación repentina que sientes al usar tu smartphone:<b> recompensas intermitentes.</b></p>
+          <p>Las máquinas tragaperras fomentan comportamientos adictivos al aprovechar la sensación de que algo
+            emocionante podría suceder en cualquier momento.</p>
+          <p>Los smartphone son básicamente máquinas tragaperras que llevamos en el bolsillo, explicó Catherine Price,
+            periodista de salud galardonada y autora del libro <i>"How To Break Up With Your Phone".</i></p>
+
+          <h5 class="mt-4">Efectos psicólogos</h5>
+          <p>La adicción a los smartphone puede afectar a tus pensamientos, emociones y toma de decisiones. Está
+            asociada a condiciones como: Alcoholismo y drogodependencia, ansiedad generalizada, ansiedad social,
+            trastorno de deficit de atención e hiperactividad, depresión, impulsividad, baja autoestima, timidez,
+            insomnio y muchas más. </p>
+        </div>
+
+        <hr class="">
+
+        <div class="col-md-6">
+          <h3 class="text-body-emphasis">Lo que el exceso de tiempo frente a las pantallas le hace al cerebro adulto
+          </h3>
+          <p><a href="https://link.springer.com/article/10.1007/s11469-019-00182-2">Este estudio</a> encontró que el
+            aumento del uso de pantallas entre los adultos puede perjudicar el aprendizaje, la memoria y la salud
+            mental, así como aumentar el riesgo de degeneración neuronal prematura. El estudio muestra que, en adultos
+            de entre 18 y 25 años, el tiempo excesivo frente a las pantallas causa un adelgazamiento de la corteza
+            cerebral, la capa más externa del cerebro responsable de procesar la memoria y las funciones cognitivas,
+            como la toma de decisiones y la resolución de problemas.</p>
+          <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1525861024002263">Otro estudio</a> encontró
+            que los adultos que veían televisión durante cinco horas o más al día tenían un mayor riesgo de desarrollar
+            enfermedades relacionadas con el cerebro, como demencia, accidentes cerebrovasculares o Parkinson.</p>
+          <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9638701/">Este estudio</a> también descubrió que el
+            tiempo excesivo frente a las pantallas puede dificultar el sueño, especialmente cuando se mira una pantalla
+            tarde en la noche. La luz de la pantalla puede retrasar la liberación de melatonina desde la glándula pineal
+            del cerebro, lo que afecta el ritmo circadiano natural del cuerpo y provoca dificultades para dormir.</p>
+          <p><a href="https://www.imrpress.com/journal/JIN/21/1/10.31083/j.jin2101028/htm">Estudios adicionales</a>
+            encontraron que los adultos que pasan un tiempo excesivo frente a las pantallas o tienen una adicción
+            diagnosticada al smartphone tienen un menor volumen de materia gris. La materia gris es un tejido cerebral
+            esencial para el funcionamiento diario del ser humano y es responsable de todo, desde el movimiento hasta la
+            memoria y las emociones. El volumen de materia gris disminuye naturalmente a medida que envejecemos, por lo
+            que, además de reducir el tiempo frente a las pantallas, es crucial participar en actividades que mantengan
+            el volumen de materia gris y promuevan la salud cerebral, como el ejercicio y el movimiento, el sueño
+            reparador, la interacción social y la gestión del estrés. </p>
+        </div>
+
+        <div class="col-md-6">
+          <figure>
+            <blockquote class="blockquote">
+              <p>"El tiempo frente a las pantallas pasivo es como comer azúcar, pero para tu cerebro. Sabe bien y lo
+                deseas ahora, pero en realidad no te estás alimentando. No le estás dando nutrición a tu cerebro", dice
+                Loeffler. "En su lugar, reemplaza el tiempo frente a las pantallas con un hábito saludable intencional
+                que nutra tu cerebro de una manera saludable. Las actividades de medicina del estilo de vida, como el
+                ejercicio, el buen sueño, la conexión social y la gestión del estrés, funcionan como 'nutrición' para tu
+                cerebro y tu salud mental"</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Maris Loeffler, MA <cite title="Source Title">Stanford Lifestyle Medicine Cognitive Enhancement</cite>
+            </figcaption>
+          </figure>
+          <p>Específicamente, Loeffler nos advierte que no debemos tomar el teléfono después de que suene la alarma por
+            la mañana. Ella explica que mirar el correo electrónico o las redes sociales en el teléfono mientras aún
+            estamos en la cama sacude el sistema nervioso y puede activar la respuesta de lucha o huida, ya que aún no
+            estamos completamente despiertos.</p>
+          <p>Además, si miramos nuestros teléfonos lo primero en la mañana, creamos un patrón y podemos establecer la
+            respuesta de lucha o huida como nuestro modo predeterminado de funcionamiento. Así que, no solo este
+            comportamiento establece un tono lleno de ansiedad para el día, sino que también estamos entrenando a
+            nuestros cerebros para ser más hipervigilantes en general.</p>
+          <figure>
+            <blockquote class="blockquote">
+              <p>"Uno de los mayores problemas al coger el teléfono de inmediato por la mañana es que, cuando tienes un
+                objeto cerca de tu cara, se registra como una amenaza. No querrías despertarte y mirar a un oso a la
+                cara todas las mañanas. A nivel fisiológico, es lo mismo".</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Maris Loeffler, MA <cite title="Source Title">Stanford Lifestyle Medicine Cognitive Enhancement</cite>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </main>
+    <footer class="pt-5 my-5 text-body-secondary border-top">
+      Creado por Sean Leitch <a href="https://github.com/selekode">Selekode</a> &middot; &copy; 2024
+    </footer>
+  </div>
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/calculateTimeWasted.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
